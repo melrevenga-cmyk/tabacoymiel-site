@@ -49,17 +49,9 @@ nav a:hover{color:var(--gold)}
 .hero-cta svg{width:14px;flex-shrink:0;transition:transform .3s}
 .hero-cta:hover svg{transform:translateX(4px)}
 
-.hero-right{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:5rem 4rem;background:linear-gradient(135deg, var(--tobacco-2) 0%, var(--ink) 100%)}
-.hero-right::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg, var(--tobacco) 0%, transparent 12%),radial-gradient(ellipse at center 40%, rgba(200,148,61,.22), transparent 60%);pointer-events:none}
-.hero-array{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;width:100%;max-width:580px;align-items:end}
-.hero-array-item{position:relative;display:flex;flex-direction:column;align-items:center}
-.hero-array-item:nth-child(1){transform:translateY(20px)}
-.hero-array-item:nth-child(2){transform:translateY(-20px)}
-.hero-array-item:nth-child(3){transform:translateY(20px)}
-.hero-array-item .candle-svg{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;box-shadow:0 30px 50px -15px rgba(0,0,0,.65)}
-.hero-array-cap{margin-top:1.4rem;text-align:center}
-.hero-array-cap .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:.95rem;color:var(--gold);display:block;line-height:1}
-.hero-array-cap .t{font-family:'Cinzel',serif;font-weight:500;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cream);display:block;margin-top:.45rem;line-height:1.3}
+.hero-right{position:relative;overflow:hidden;background:var(--ink)}
+.hero-right::before{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(90deg, var(--tobacco) 0%, transparent 18%),linear-gradient(180deg, transparent 60%, rgba(14,7,3,.55) 100%);pointer-events:none}
+.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.02) contrast(1.03)}
 
 .marquee{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:1.6rem 0}
 .marquee-track{display:flex;gap:3.5rem;animation:scroll 45s linear infinite;width:max-content;align-items:center}
@@ -160,9 +152,7 @@ footer .f-brand{font-family:'Cinzel',serif;font-weight:500;color:var(--gold);let
 @media(max-width:1024px){
   #hero{grid-template-columns:1fr;min-height:auto}
   .hero-left{padding:7rem 2rem 5rem}
-  .hero-right{padding:3rem 2rem 5rem}
-  .hero-array{max-width:460px;gap:1rem}
-  .hero-array-item:nth-child(1),.hero-array-item:nth-child(2),.hero-array-item:nth-child(3){transform:none}
+  .hero-right{height:auto;min-height:60vh;padding:0}
   .story-inner{grid-template-columns:1fr;gap:3rem;padding:0}
   .story{padding:6rem 2rem}
   .collection,.contact{padding:6rem 2rem}
@@ -210,20 +200,7 @@ footer .f-brand{font-family:'Cinzel',serif;font-weight:500;color:var(--gold);let
     </a>
   </div>
   <div class="hero-right">
-    <div class="hero-array">
-      <div class="hero-array-item">
-        <img class="candle-svg" src="images/calendula-lavender.jpg" alt="Calendula & Lavender candle">
-        <div class="hero-array-cap"><span class="n">N° 01</span><span class="t">Calendula<br>&amp; Lavender</span></div>
-      </div>
-      <div class="hero-array-item">
-        <img class="candle-svg" src="images/pure-beeswax.jpg" alt="Pure Beeswax candle">
-        <div class="hero-array-cap"><span class="n">N° 02</span><span class="t">Pure<br>Beeswax</span></div>
-      </div>
-      <div class="hero-array-item">
-        <img class="candle-svg" src="images/pure-coconut.jpg" alt="Pure Coconut candle">
-        <div class="hero-array-cap"><span class="n">N° 03</span><span class="t">Pure<br>Coconut</span></div>
-      </div>
-    </div>
+    <img class="hero-image" src="images/hero-image.jpg" alt="Tabaco y Miel artisanal candles — Calendula & Lavender, Pure Beeswax, and Pure Coconut, lit at sunset on a Tulum beach">
   </div>
 </section>
 
